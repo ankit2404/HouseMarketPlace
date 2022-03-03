@@ -14,7 +14,7 @@ import { toast } from "react-toastify";
 import { v4 as uuidv4 } from "uuid";
 
 function CreateListing() {
-  const [geolocationEnabled, setGeolocationEnabled] = useState(false);
+  // const [geolocationEnabled, setGeolocationEnabled] = useState(false);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     type: "rent",
@@ -276,7 +276,6 @@ function CreateListing() {
               />
             </div>
           </div>
-
           <label className="formLabel">Parking spot</label>
           <div className="formButtons">
             <button
@@ -302,7 +301,6 @@ function CreateListing() {
               No
             </button>
           </div>
-
           <label className="formLabel">Furnished</label>
           <div className="formButtons">
             <button
@@ -328,7 +326,6 @@ function CreateListing() {
               No
             </button>
           </div>
-
           <label className="formLabel">Address</label>
           <textarea
             className="formInputAddress"
@@ -338,32 +335,32 @@ function CreateListing() {
             onChange={onMutate}
             required
           />
-          {!geolocationEnabled && (
-            <div className="formLatLng flex">
-              <div>
-                <label className="formLabel">Latitude</label>
-                <input
-                  className="formInputSmall"
-                  type="number"
-                  id="latitude"
-                  value={latitude}
-                  onChange={onMutate}
-                  required
-                />
-              </div>
-              <div>
-                <label className="formLabel">Longitude</label>
-                <input
-                  className="formInputSmall"
-                  type="number"
-                  id="longitude"
-                  value={longitude}
-                  onChange={onMutate}
-                  required
-                />
-              </div>
+          {/* {!geolocationEnabled && ( */}
+          <div className="formLatLng flex">
+            <div>
+              <label className="formLabel">Latitude</label>
+              <input
+                className="formInputSmall"
+                type="number"
+                id="latitude"
+                value={latitude}
+                onChange={onMutate}
+                required
+              />
             </div>
-          )}
+            <div>
+              <label className="formLabel">Longitude</label>
+              <input
+                className="formInputSmall"
+                type="number"
+                id="longitude"
+                value={longitude}
+                onChange={onMutate}
+                required
+              />
+            </div>
+          </div>
+          {/* )} */}
           <label className="formLabel">Offer</label>
           <div className="formButtons">
             <button
@@ -387,7 +384,6 @@ function CreateListing() {
               No
             </button>
           </div>
-
           <label className="formLabel">Regular Price</label>
           <div className="formPriceDiv">
             <input
@@ -402,7 +398,6 @@ function CreateListing() {
             />
             {type === "rent" && <p className="formPriceText">$ / Month</p>}
           </div>
-
           {offer && (
             <>
               <label className="formLabel">Discounted Price</label>
@@ -418,7 +413,6 @@ function CreateListing() {
               />
             </>
           )}
-
           <label className="formLabel">Images</label>
           <p className="imagesInfo">
             The first image will be the cover (max 6).

@@ -15,7 +15,7 @@ import Spinner from "../components/Spinner";
 
 function EditListing() {
   // eslint-disable-next-line
-  const [geolocationEnabled, setGeolocationEnabled] = useState(false);
+  // const [geolocationEnabled, setGeolocationEnabled] = useState(false);
   const [loading, setLoading] = useState(false);
   const [listing, setListing] = useState(false);
   const [formData, setFormData] = useState({
@@ -355,32 +355,32 @@ function EditListing() {
             required
           />
 
-          {!geolocationEnabled && (
-            <div className="formLatLng flex">
-              <div>
-                <label className="formLabel">Latitude</label>
-                <input
-                  className="formInputSmall"
-                  type="number"
-                  id="latitude"
-                  value={latitude}
-                  onChange={onMutate}
-                  required
-                />
-              </div>
-              <div>
-                <label className="formLabel">Longitude</label>
-                <input
-                  className="formInputSmall"
-                  type="number"
-                  id="longitude"
-                  value={longitude}
-                  onChange={onMutate}
-                  required
-                />
-              </div>
+          {/* {!geolocationEnabled && ( */}
+          <div className="formLatLng flex">
+            <div>
+              <label className="formLabel">Latitude</label>
+              <input
+                className="formInputSmall"
+                type="number"
+                id="latitude"
+                value={latitude}
+                onChange={onMutate}
+                required
+              />
             </div>
-          )}
+            <div>
+              <label className="formLabel">Longitude</label>
+              <input
+                className="formInputSmall"
+                type="number"
+                id="longitude"
+                value={longitude}
+                onChange={onMutate}
+                required
+              />
+            </div>
+          </div>
+          {/* )} */}
 
           <label className="formLabel">Offer</label>
           <div className="formButtons">
